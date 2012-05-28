@@ -14,11 +14,10 @@
                 jobs = true;
         %>
     <tr class='<%= item.meta.jobs[job].invalid ? "job-invalid" : ""%>'>
-      <td><a href='/scheduler/show/<%- item.meta.jobs[job].jobName %>'><%- item.meta.jobs[job].jobName %></a></td>
+      <td><a href='/scheduler/show/<%= item.meta.jobs[job].jobName %>'><%- item.meta.jobs[job].jobName %></a></td>
       <td><%- item.meta.jobs[job].cronTimeString %></td><% if(item.meta.jobs[job].enabled) { %>
-      <td><a href="/scheduler/switch/off/%3C%-%20item.meta.jobs[job].jobName%20%%3E" title="Switch job on ..."><%- item.meta.jobs[job].enabled %></a></td><% } else { %>
-      <td><a href="/scheduler/switch/on/%3C%-%20item.meta.jobs[job].jobName%20%%3E" title="Switch job on ..."><%- item.meta.jobs[job].enabled %></a></td><% } %>
-      <td><%- item.meta.jobs[job].module %></td>
+      <td><a href="/scheduler/switch/off/<%= item.meta.jobs[job].jobName%>" title="Switch job on ..."><%- item.meta.jobs[job].enabled %></a></td><% } else { %>
+      <td><a href="/scheduler/switch/on/<%= item.meta.jobs[job].jobName%>" title="Switch job on ..."><%- item.meta.jobs[job].enabled %></a></td><% } %>      <td><%- item.meta.jobs[job].module %></td>
       <td><%- item.meta.jobs[job].method %></td>
       <td></td>
     </tr><%
