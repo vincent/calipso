@@ -18,7 +18,7 @@
           "messages": {"template": "messages.html"},
           "body": {"template": "body.html"},
           "sidePanel": {"template": "sidePanel.html"},
-          "footer": {"template": "footer.html","cache":true}
+          "footer": {"template": "footer.html","cache":true}         
         }
       }
     },
@@ -43,14 +43,12 @@
         }
       }
     },
-    "install": {
+	"flickerLanding": {
       "layout": {
-        "template": "install.html",    
-        "copyFrom": "default",
+        "template": "default.html",
+        "copyFrom":"default",
         "sections": {
-          "body": {"template": "body.html"},
-          "footer": {"template": "footer.html"},
-          "sidePanel": {"disable":true}
+          "body": {"template": "body.html","cache":true,"varyParams":true}
         }
       }
     },
